@@ -1,0 +1,25 @@
+{
+    "name": "raphagood/multidados",
+    "description": "Pacote de integração com a api do CRM Multidados",
+    "authors": [
+        {
+            "name": "Raphael Godoi",
+            "email": "raphael.fatecandos@gmail.com"
+        },
+        {
+            "name": "Kevin Santana",
+            "email": "kevin@dev.com"
+        }
+    ],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Multidados\\": "src/"
+        }
+    }
+}
