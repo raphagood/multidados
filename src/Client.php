@@ -1,9 +1,9 @@
 <?php
 
-namespace Multidados;
+namespace Raphagood\Multidados;
 
 use GuzzleHttp\Client as HttpClient;
-use Multidados\Models\ProtocoloModel;
+use Raphagood\Multidados\Models\ProtocoloModel;
 
 class Client {
 

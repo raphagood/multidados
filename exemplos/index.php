@@ -1,9 +1,9 @@
 <?php
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-use Multidados\Client;
-use Multidados\Models\ProtocoloModel;
+use Raphagood\Multidados\Client;
+use Raphagood\Multidados\Models\ProtocoloModel;
 
 $multidados = new Client([
     'base_uri' => 'http://seusite.com.br',
