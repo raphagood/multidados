@@ -1,8 +1,5 @@
 # Multidados
 
-[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/raphagood/multidados]
-[![Software License][ico-license]](LICENSE.md)
-
 Este pacote é um cliente, que facilita a integraçao com as api's do CRM da empresa Multidados T.I.
 
 Acesse o site oficial da empresa através do link: https://www.multidadosti.com.br/
