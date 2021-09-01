@@ -1,16 +1,17 @@
-# :Multidados
+# Multidados
 
-Este pacote um cliente, que facilita a integraçao com as api's do CRM da empresa Multidados T.I.
+Este pacote é um cliente, que facilita a integraçao com as api's do CRM da empresa Multidados T.I.
 
-Link da site oficial da empresa: https://www.multidadosti.com.br/
+Acesse o site oficial da empresa através do link: https://www.multidadosti.com.br/
 
 **Importante:**
 
-A Multidados atualmente não possui um pacote de integração, mas vale ressaltar que nosso pacote ainda não foi oficializado pela empresa, mas funciona perfeitamente.
+Este pacote foi criado de forma independente e não tem qualquer relação com a empresa Multidados T.I
 
-## Instalção
 
-Intalar este pacote é um tarefa muito simples, recomendados fortemente que você utilize o composer, conforme abaixo: 
+## Instalação
+
+Intalar este pacote utilizando composer é um tarefa muito simples, veja abaixo:
 
 ``` bash
 $ composer require raphagood/multidados
@@ -18,7 +19,7 @@ $ composer require raphagood/multidados
 
 ## Utilização
 
-Para utilizar crie uma instância, informando os dados de comunicação com a api, estes dados são fornecidos pela própria Multidados.
+Para utilizar o cliente, crie uma instância informando os dados de comunicação com a api, estes dados são fornecidos pela própria Multidados.
 
 ``` php
 $multidados = new Raphagood\Multidados\Cliente([
@@ -27,32 +28,42 @@ $multidados = new Raphagood\Multidados\Cliente([
     'password' => '123456'
 ]);
 
+
 try
 {
 
-    echo "<pre>";
-    var_dump($multidados->obterDivisoes());
-    echo "</pre>";
+   echo "<pre>";
+   var_dump($multidados->obterDivisoes());
+   echo "</pre>";
 
 } catch (\Exception $e) {
 
-    echo $e->getMessage();
+   echo $e->getMessage();
+
 }
 ```
+## Recursos disponíveis
 
-## Change log
+| Recursos                  | Are                                        |
+| ------------------------- |:------------------------------------------:|
+| obterDivisoes             | Obtém todas as divisões cadastradas no CRM |
+| consultarOcorrencias      | Consulta as ocorrências de acordo com o parâmetros especificados      |
+| gerarProtocolo            | Gera um protocolo |
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+**Importante:**
 
-## Contributing
+Acesso o diretório de exemplos, para ver como utilizar cada um dos recursos acima, e complemente com a documentação oficial da própria Multidados
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md) for details.
 
-## Security
+## Histórico de alterações
+
+Por favor veja [CHANGELOG](CHANGELOG.md) para mais informações sobre o que mudou recentemente.
+
+## Segurança
 
 Se você descobrir qualquer problema relacionado à segurança, envie um e-mail para: raphael.fatecandos@gmail.com, agradeço a colaboração.
 
-## Credits
+## Créditos
 
 - [Raphael Godoi][https://github.com/raphagood]
 - [Kevin Santana][#]
