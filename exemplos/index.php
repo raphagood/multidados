@@ -1,27 +1,3 @@
-<?php
-
-require '../vendor/autoload.php';
-
-use Raphagood\Multidados\Client;
-use Raphagood\Multidados\Models\ProtocoloModel;
-
-$multidados = new Client([
-    'base_uri' => 'http://seusite.com.br',
-    'user' => 'multidados',
-    'password' => '123456'
-]);
-
-try
-{
-//Retorna todas as divisões
-echo "<pre>";
-var_dump($multidados->obterDivisoes());
-echo "</pre>";
-} catch (\Exception $e) {
-
-    echo $e->getMessage();
-
-}
 
 /*
 
