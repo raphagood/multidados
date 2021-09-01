@@ -1,5 +1,9 @@
 # Multidados
 
+[![Última versão no Packagist][ico-version]][https://packagist.org/packages/raphagood/multidados]
+[![Software License][ico-license]](LICENSE.md)
+[![Instalações][ico-downloads]][https://packagist.org/packages/raphagood/multidados/stats]
+
 Este pacote é um cliente, que facilita a integraçao com as api's do CRM da empresa Multidados T.I.
 
 Acesse o site oficial da empresa através do link: https://www.multidadosti.com.br/
@@ -52,7 +56,7 @@ try
 
 **Importante:**
 
-Acesso o diretório de exemplos, para ver como utilizar cada um dos recursos acima, e complemente com a documentação oficial da própria Multidados
+Acesse o diretório de exemplos, para ver como utilizar cada um dos recursos acima, e complemente com a documentação oficial da própria Multidados.
 
 
 ## Histórico de alterações
@@ -61,17 +65,13 @@ Por favor veja [CHANGELOG](CHANGELOG.md) para mais informações sobre o que mud
 
 ## Segurança
 
-Se você descobrir qualquer problema relacionado à segurança, envie um e-mail para: raphael.fatecandos@gmail.com, agradeço a colaboração.
+Se você descobrir qualquer problema relacionado à segurança, por favor, envie um e-mail para: raphael.fatecandos@gmail.com.
 
 ## Créditos
 
 - [Raphael Godoi][https://github.com/raphagood]
-- [Kevin Santana][#]
+- [Kevin Santana][https://github.com/KevinKristianSantana]
 
 ## Licença
 
-[ico-version]: https://img.shields.io/packagist/v/raphagood/multidados.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[link-packagist]: https://packagist.org/packages/raphagood/multidados
-[link-downloads]: https://packagist.org/packages/raphagood/multidados
-[link-author]: https://github.com/raphagood
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
