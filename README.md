@@ -49,6 +49,9 @@ try
 | obterDivisoes             | Obtém todas as divisões cadastradas no CRM |
 | consultarOcorrencias      | Consulta as ocorrências de acordo com o parâmetros especificados      |
 | gerarProtocolo            | Gera um protocolo |
+| incluirOcorrencia         | Incluí uma ocorrência |
+| editarOcorrencia          | Edita uma ocorrência já inclusa |
+| editarOcorrenciasLote     | Edita várias ocorrências já inclusas |
 
 **Importante:**
 

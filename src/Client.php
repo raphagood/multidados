@@ -90,6 +90,78 @@ class Client {
     }
 
 
+    public function incluirOcorrencia($params)
+    {
+
+        try {
+
+            $params['usuario_ws'] = $this->user;
+            $params['senha_ws'] = $this->password;
+
+            $ocorrencia = $this->httpClient->request('POST', 'incluir_oc', [
+
+                'json' => $params
+
+            ]);
+
+            return json_decode($ocorrencia->getBody()->getContents());
+
+        }
+        catch (\Exception $e)
+        {
+            throw new \Exception($e);
+        }
+
+    }
+
+
+    public function editarOcorrencia($params)
+    {
+
+        try 
+        {
+
+            $ocorrencia = $this->httpClient->request('POST', 'editar_ocorrencia', [
+
+                'json' => $params
+
+            ]);
+
+            return json_decode($ocorrencia->getBody()->getContents());
+
+        }
+        catch (\Exception $e)
+        {
+            throw new \Exception($e);
+        }
+
+    }
+
+
+    public function editarOcorrenciasLote($params)
+    {
+        
+        try
+        {
+
+            $ocorrencias = $this->httpClient->request('POST', 'editar_ocorrencia_lote', [
+
+                'json' => [
+                    'lista_ocs' => $params
+                ]
+
+            ]);
+
+            return json_decode($ocorrencias->getBody()->getContents());
+
+        }
+        catch (\Exception $e)
+        {
+            throw new \Exception($e);
+        }
+
+    }
+
 
 }
 ?>
