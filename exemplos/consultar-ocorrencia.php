@@ -31,7 +31,8 @@ try
             'cli_ddd_tel_cel_cliente',
             'codigo_divisao_original',
             'nome_solicitacao_original',
-            'ultima_narrativa'
+            'ultima_narrativa',
+            'nome_divisao_original'
         ]
     )[0];
     

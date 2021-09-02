@@ -1,6 +1,6 @@
 <?php
 
-namespace RaphaGood\Multidados\Models;
+namespace Raphagood\Multidados\Models;
 
 class ProtocoloModel {
 
