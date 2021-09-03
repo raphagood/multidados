@@ -147,7 +147,7 @@ class Client {
             $ocorrencias = $this->httpClient->request('POST', 'editar_ocorrencia_lote', [
 
                 'json' => [
-                    'lista_ocs' => $params
+                    'lista_ocs' => json_encode($params)
                 ]
 
             ]);
