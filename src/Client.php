@@ -4,6 +4,8 @@ namespace Raphagood\Multidados;
 
 use GuzzleHttp\Client as HttpClient;
 use Raphagood\Multidados\Models\ProtocoloModel;
+use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ServerException;
 
 class Client {
 
@@ -82,7 +84,19 @@ class Client {
             return json_decode($ocorrencias->getBody()->getContents());
 
         }
-          catch (\Exception $e)
+        catch(ClientException $e)
+        {
+
+            return json_decode($e->getResponse()->getBody()->getContents());
+
+        }
+        catch(ServerException $e)
+        {
+
+            return json_decode($e->getResponse()->getBody()->getContents());
+
+        }
+        catch (\Exception $e)
         {
             throw new \Exception($e);
         }
