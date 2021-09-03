@@ -65,7 +65,7 @@ class Client {
     }
 
 
-    public function consultarOcorrencias($filtros, $dados): array
+    public function consultarOcorrencias($filtros, $dados)
     {
 
         try {
