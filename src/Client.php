@@ -104,20 +104,45 @@ class Client {
     }
 
 
-    public function incluirOcorrencia($params)
+    public function incluirOcorrencia($params, $multipart)
     {
 
-        try {
+        try 
+        {
 
-            $params['usuario_ws'] = $this->user;
-            $params['senha_ws'] = $this->password;
+            if($multipart)
+            {
 
-            $ocorrencia = $this->httpClient->request('POST', 'incluir_oc', [
+                $user = [
+                    'name'     => $this->user,
+                    'contents' => $this->password
+                ];
 
-                'json' => $params
+                array_push($params, $user);
 
-            ]);
+                $ocorrencia = $this->httpClient->request('POST', 'incluir_oc', [
 
+                    'content-type' => 'application/x-www-form-urlencoded',
+                    'multipart'    => $params
+
+                ]);
+
+            }
+            else
+            {  
+
+                $params['usuario_ws'] = $this->user;
+                $params['senha_ws'] = $this->password;
+
+                $ocorrencia = $this->httpClient->request('POST', 'incluir_oc', [
+
+                    'json' => $params
+    
+                ]);
+    
+
+            }
+            
             return json_decode($ocorrencia->getBody()->getContents());
 
         }
