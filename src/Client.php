@@ -104,7 +104,7 @@ class Client {
     }
 
 
-    public function incluirOcorrencia($params, $multipart)
+    public function incluirOcorrencia($params, $multipart = false)
     {
 
         try 
@@ -114,11 +114,16 @@ class Client {
             {
 
                 $user = [
-                    'name'     => $this->user,
+                    'name'     => 'usuario_ws',
+                    'contents' => $this->user
+                ];
+
+                $password = [
+                    'name'     => 'senha_ws',
                     'contents' => $this->password
                 ];
 
-                array_push($params, $user);
+                array_push($params, $user, $password);
 
                 $ocorrencia = $this->httpClient->request('POST', 'incluir_oc', [
 
